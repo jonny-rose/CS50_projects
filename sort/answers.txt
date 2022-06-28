@@ -1,0 +1,27 @@
+sort1 uses: bubble sort
+
+How do you know?: performed better than the other 2 sorting sorted numbers
+
+sort2 uses: merge sort
+
+How do you know?: performed better than the other 2 sorting random numbers
+
+sort3 uses: selection sort
+
+How do you know?: slowest than the other 2 on random numbers
+
+
+random:
+1: 0.093
+2: 0.051
+3: 0.079
+
+reversed
+1: 0.091
+2: 0.029
+3: 0.050
+
+sorted
+1: 0.051
+2: 0.066
+3: 0.067

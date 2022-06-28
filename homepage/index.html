@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>My Webpage</title>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+
+                let loopItems = setInterval(changeText, 1000);
+
+                let items = ['the programmer', 'the coach', 'the man'];
+                let loopItem = 0;
+
+                function changeText() {
+                    loopItem++;
+                    if (loopItem == items.length) {
+                        loopItem = 0;
+                    }
+                    document.querySelector('#whoami').innerHTML = items[loopItem];
+                }
+            });
+
+        </script>
+    </head>
+    <body>
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #11999E;">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html">My Webpage</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="cv.html">Curriculum vitae</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                  </li>
+                </ul>
+                <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-light" type="submit" onclick="loopItems()">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+
+          <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/profile2.jpg" class="d-block w-100 carousel-img" alt="profile1">
+              </div>
+              <div class="carousel-item">
+                <img src="images/profile3.jpg" class="d-block w-100 carousel-img" alt="profile2">
+              </div>
+              <div class="carousel-item">
+                <img src="images/profile1.jpg" class="d-block w-100 carousel-img" alt="profile3">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
+          <div class="top-container">
+            <h1>Jonny Rose</h1>
+            <h2 class="subtitle" id="whoami">the programmer</h2>
+            <img class="profile-img2" src="images/profile3.jpg" alt="profile-img2">
+
+          </div>
+
+        <div class="middle-container">
+            <div class="profile">
+              <img class="profile-img" src="images/profile2.jpg" alt="profile-pic">
+              <h2>Hello</h2>
+              <p>I am Jonny - Crossfit coach, athlete and co-owner of Uzina Crossfit.</p>
+            </div>
+            <hr>
+            <div class="skills">
+              <h2><a href="about.html">About me</a></h2>
+              <div class="skill-row">
+                <img class="skill-img1" src="images/profile6.jpg" alt="skill-kbs">
+                <h3>Coach</h3>
+                <p>I am a Crossfit Level 2 certified trainer.</p>
+              </div>
+              <div class="skill-row">
+                <img class="skill-img2" src="images/profile5.jpg" alt="ninjaw">
+                <h3>Athlete</h3>
+                <p>Highligths of my career as a profesional Crossfit athlete.</p>
+              </div>
+            </div>
+            <hr>
+            <div class="contact-me">
+              <h2>Get In Touch</h2>
+              <h3>If you love sports as much as I do...</h3>
+              <p class="contact-me-txt">If you love to compete,<br> if you want a broad general physical set of skills,<br> or just start a new healthy and active lifestyle find me here:</p>
+              <a class="btn btn-outline-info contact-btn" href="contact.html">CONTACT ME</a>
+            </div>
+          </div>
+
+
+          <div class="bottom-container">
+            <a class="footer-link" href="https://www.facebook.com/ionut.trandafir.54"><i class="fab fa-facebook-square"></i> Facebook</a>
+            <a class="footer-link" href="https://www.instagram.com/coach.jonny.rose/"><i class="fab fa-instagram"></i> Instagram</a>
+            <a class="footer-link" href="https://www.youtube.com/user/jonnyrose44"><i class="fab fa-youtube"></i> Youtube</a>
+            <p class="copyright">© 2022 Jonny Rose.</p>
+          </div>
+
+    </body>
+</html>
